@@ -38,7 +38,6 @@ function storeCallHistory(serviceName, serviceNumber) {
         time: new Date().toLocaleTimeString()
     };
     callHistory.push(data);
-    console.log(callHistory);
 
     const callHistoryHtml = document.getElementById('call-history');
     callHistoryHtml.innerText = '';
@@ -62,7 +61,7 @@ function storeCallHistory(serviceName, serviceNumber) {
 function calculateRemainingCoins(){
     const coin = getInnerTextInInteger('coin-count') - 20;
     if (coin < 0) {
-        alert("You don't have sufficient coins to place a call!\n\nTerminating this call.");
+        alert("❌ You don't have sufficient coins to place a call!\n\nTerminating this call.");
         return false;
     } 
     else {
