@@ -1,4 +1,7 @@
-// -------------------- Shared Functions --------------------
+// ------------------------- Shared Functions ---------------------------
+const callHistory = [];
+
+
 function getInnerTextInInteger(id){
     item = parseInt(document.getElementById(id).innerText);
     return item;
@@ -6,6 +9,12 @@ function getInnerTextInInteger(id){
 
 function setInnerText(id, value){
     document.getElementById(id).innerText = value;
+}
+
+
+// ----------------------- Alert Functionality -----------------------------
+function alertMessage(serviceName, serviceNumber){
+    alert("Calling " + serviceName + " : " + serviceNumber + "... \n\nPress OK to continue.");
 }
 
 
@@ -21,6 +30,34 @@ for (const eachHeart of hearts) {
 }
 
 
+// --------------------- Update Call history ---------------------------
+function storeCallHistory(serviceName, serviceNumber) {
+    const data = {
+        name: serviceName,
+        number: serviceNumber,
+        time: new Date().toLocaleTimeString()
+    };
+    callHistory.push(data);
+    console.log(callHistory);
+
+    const callHistoryHtml = document.getElementById('call-history');
+    callHistoryHtml.innerText = '';
+
+    for (const i of callHistory) {
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <div class="flex justify-between items-center px-6 py-3 my-4 bg-[#FAFAFA] rounded-lg">
+                <div class="">
+                    <h5 class="font-bold">${i.name}</h5>
+                    <p class="text-gray-500">${i.number}</p>
+                </div>
+                <p class="font-semibold">${i.time}</p>
+            </div>
+        `
+        callHistoryHtml.appendChild(div);
+    }
+}
+
 // -------------------- Event Listeners on call buttons -----------------------
 function calculateRemainingCoins(){
     const coin = getInnerTextInInteger('coin-count') - 20;
@@ -34,15 +71,13 @@ function calculateRemainingCoins(){
     }
 }
 
-function alertMessage(serviceName, serviceNumber){
-    alert("Calling " + serviceName + " : " + serviceNumber + "... \n\nPress OK to continue.");
-}
 
 document.getElementById('call-btn-1').addEventListener('click', function(){
     const serviceName = document.getElementById('service-name-1').innerText;
     const serviceNumber = document.getElementById('service-number-1').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -51,6 +86,7 @@ document.getElementById('call-btn-2').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-2').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -59,6 +95,7 @@ document.getElementById('call-btn-3').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-3').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -67,6 +104,7 @@ document.getElementById('call-btn-4').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-4').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -75,6 +113,7 @@ document.getElementById('call-btn-5').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-5').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -83,6 +122,7 @@ document.getElementById('call-btn-6').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-6').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -91,6 +131,7 @@ document.getElementById('call-btn-7').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-7').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -99,6 +140,7 @@ document.getElementById('call-btn-8').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-8').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);
     }
 });
 
@@ -107,6 +149,7 @@ document.getElementById('call-btn-9').addEventListener('click', function(){
     const serviceNumber = document.getElementById('service-number-9').innerText;
     if (calculateRemainingCoins() === true) {
         alertMessage(serviceName, serviceNumber);
+        storeCallHistory(serviceName, serviceNumber);    
     }
 });
 
