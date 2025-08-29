@@ -7,21 +7,82 @@
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header>
 
-    </header>
 
-    <section class="banner"> 
+<body class="h-[100vh] bg-[rgba(65,255,107,0.1)]">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-2 md:flex-row flex-col gap-5 md:gap-0 px-10 bg-white">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <img class="w-12" src="assets/logo.png" alt="">
+            <h2 class="text-[#006747] text-xl md:text-2xl font-extrabold md:w-7">Emergency Service</h2>
+        </div>
+        <!-- Information -->
+        <div class="flex items-center gap-2">
+            <!-- Heart -->
+            <div class="flex items-center gap-2 bg-[rgba(65,255,107,0.1)] py-3 px-7 md:px-9 rounded-full">
+                <p class="text-base font-bold">0</p>
+                <img class="w-7" src="assets/heart.png" alt="">
+            </div>
+            <!-- Coin -->
+            <div class="flex items-center gap-2 bg-[rgba(65,255,107,0.1)] py-3 px-7 md:px-9 rounded-full">
+                <p class="text-base font-bold">100</p>
+                <img class="w-7" src="assets/coin.png" alt="">
+            </div>
+            <!-- Copy -->
+            <div class="flex items-center gap-2 bg-[#00A63E] py-3 px-7 md:px-9 rounded-full">
+                <p class="text-base font-medium text-white">0</p>
+                <p class="text-base font-medium text-white">Copy</p>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero flex flex-col gap-4 items-center text-center p-10 mt-5 md:mt-1 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"> 
+        <img class="w-16" src="assets/logo-dark.png" alt="">
+        <h2 class="text-3xl font-bold text-white">Emergency Service Directory</h2>
+        <p class="text-base text-white">Government Emergency Services at Your Fingertip - A Project by  Government of the People's Republic of Bangladesh</p>
     </section>
 
-    <main>
+    <!-- Main Section -->
+    <main class="grid grid-cols-4 grid-rows-3 gap-5 p-6 md:p-14">
+        <div class="col-span-3 lg:col-span-1">
+
+            <div class="card p-4 bg-white shadow-md">
+                <div class="flex justify-between items-center">
+                    <div class="w-12 h-12 bg-[#FFE3E2] rounded-xl">
+                        <img class="p-3" src="assets/emergency.png" alt="">
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="mt-3">
+                    <h2 class="text-2xl font-bold">National Emergency Number</h2>
+                    <p class="text-lg font-normal text-gray-500">National Emergency</p>
+                </div>
+                <div class="mt-3">
+                    <p class="text-2xl font-bold">999</p>
+                    <p class="text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-12">All</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
+                </div>
+                
+            </div>
+
+        </div>
+        
+        <!-- History -->
+        <div class="border border-gray-700 h-10 col-span-1">
+
+        </div>
 
     </main>
     
