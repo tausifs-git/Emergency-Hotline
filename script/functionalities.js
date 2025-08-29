@@ -30,6 +30,7 @@ for (const eachHeart of hearts) {
 }
 
 
+
 // --------------------- Update Call history ---------------------------
 function storeCallHistory(serviceName, serviceNumber) {
     const data = {
@@ -57,6 +58,16 @@ function storeCallHistory(serviceName, serviceNumber) {
     }
 }
 
+// -------------------- Clear Call History --------------------------
+document.getElementById('clear-btn').addEventListener('click', function(){
+    callHistory.splice(0, callHistory.length);
+    const callHistoryHtml = document.getElementById('call-history');
+    callHistoryHtml.innerText = '';
+});
+
+
+
+
 // -------------------- Event Listeners on call buttons -----------------------
 function calculateRemainingCoins(){
     const coin = getInnerTextInInteger('coin-count') - 20;
@@ -69,7 +80,6 @@ function calculateRemainingCoins(){
         return true;
     }
 }
-
 
 document.getElementById('call-btn-1').addEventListener('click', function(){
     const serviceName = document.getElementById('service-name-1').innerText;
@@ -153,6 +163,8 @@ document.getElementById('call-btn-9').addEventListener('click', function(){
 });
 
 
+
+
 // -------------------- Copy Functionalities -----------------------
 function copyAlert(serviceNumber){
     alert(serviceNumber + ' is copied');
@@ -168,6 +180,7 @@ function copy(serviceNumber) {
         });
 }
 
+// -------------------- Event Listeners on copy buttons -----------------------
 document.getElementById('copy-btn-1').addEventListener('click', function(){
     const count = getInnerTextInInteger('copy-count') + 1;
     setInnerText('copy-count', count);
