@@ -38,7 +38,7 @@
             </div>
             <!-- Copy -->
             <div class="flex items-center gap-2 bg-[#00A63E] py-3 px-7 md:px-9 rounded-full">
-                <p class="text-base font-medium text-white">0</p>
+                <span id="copy-count" class="text-base font-medium text-white">0</span>
                 <p class="text-base font-medium text-white">Copy</p>
             </div>
         </div>
@@ -73,7 +73,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-12">All</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-1" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-1" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-16">Police</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-2" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-2" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-14">Fire</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-3" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-3" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -139,7 +139,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-20">Health</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-4" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-4" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-14">Help</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-5" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-5" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -183,7 +183,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-16">Govt.</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-6" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-6" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-24">Electricity</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-7" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-7" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -227,7 +227,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-16">NGO</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-8" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-8" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -249,7 +249,7 @@
                     <p class="text-sm text-gray-500 bg-gray-100 text-center rounded-3xl py-1 px-3 w-20">Travel</p>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button id="copy-btn-9" class="btn btn-outline w-[calc(50%-4px)] border-gray-500 text-gray-500 rounded-lg hover:bg-[#34c759] hover:text-black"><i class="fa-regular fa-copy"></i> Copy</button>
                     <button id="call-btn-9" class="btn bg-[#34c759] w-[calc(50%-4px)] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
